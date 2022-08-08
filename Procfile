@@ -1,1 +1,1 @@
-web: gunicorn obitospb:server
+web: gunicorn site:server

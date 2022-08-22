@@ -5,13 +5,13 @@ import dash_html_components as html
 import pandas as pd
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server=app.server
+app1 = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server=app1.server
 
 df = pd.read_csv('covid_brasil.csv')
 obitos = df["Óbitos"]
 casos = df['Casos']
-app.layout = html.Div([
+app1.layout = html.Div([
     html.H2(['Covid-19.'],
     style = {'textAlign':'center', 'font-weight':'bold', 'backgroundColor': '#778899' }
     ),
@@ -31,4 +31,4 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app1.run_server(debug=True)

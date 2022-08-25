@@ -9,8 +9,7 @@ app1 = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server=app1.server
 
 df = pd.read_csv('covid_brasil.csv')
-obitos = df["Óbitos"]
-casos = df['Casos']
+
 app1.layout = html.Div([
     html.H2(['Covid-19.'],
     style = {'textAlign':'center', 'font-weight':'bold', 'backgroundColor': '#778899' }
